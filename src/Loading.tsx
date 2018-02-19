@@ -1,6 +1,6 @@
 import {Component, CSSProperties} from 'react';
 import * as React from 'react';
-const loading = require('./loading.svg');
+import loading from './loading.svg';
 
 class Callback extends Component {
   render() {
