@@ -30,8 +30,7 @@ export default class Auth {
                 history.replace('/home');
             } else if (err) {
                 history.replace('/home');
-                // noinspection TsLint
-                console.log(err);
+                // console.debug(err);
                 alert(`Error: ${err.error}. Check the console for further details.`);
             }
         });

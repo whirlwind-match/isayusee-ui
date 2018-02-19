@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import loading from './loading.svg';
+import {Component, CSSProperties} from 'react';
+import * as React from 'react';
+const loading = require('./loading.svg');
 
 class Callback extends Component {
   render() {
-    const style = {
+    const style: CSSProperties = {
       position: 'absolute',
       display: 'flex',
       justifyContent: 'center',
@@ -14,7 +15,7 @@ class Callback extends Component {
       left: 0,
       right: 0,
       backgroundColor: 'white',
-    }
+    };
 
     return (
       <div style={style}>
