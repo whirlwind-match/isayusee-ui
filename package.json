@@ -14,7 +14,6 @@
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
     "@types/jest": "^22.1.2",
-    "@types/node": "^9.4.6",
     "@types/react": "^16.0.38",
     "@types/react-bootstrap": "^0.32.4",
     "@types/react-dom": "^16.0.4",
@@ -24,6 +23,7 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
+    "postinstall": "rm -rf node_modules/@types/node",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
