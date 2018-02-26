@@ -7,6 +7,7 @@ import Auth from './auth/Auth';
 import history from './history';
 import {Redirect, RouteComponentProps} from 'react-router';
 import Profile from './profile/Profile';
+import Ping from './profile/Ping';
 
 const auth = new Auth();
 
@@ -35,6 +36,20 @@ export const makeMainRoutes = () => {
                         !auth.isAuthenticated()
                             ? <Redirect to="/home" />
                             : <Profile auth={auth} {...props} />}
+                />
+                <Route
+                    path="/ping"
+                    render={props =>
+                        !auth.isAuthenticated()
+                            ? <Redirect to="/home" />
+                            : <Ping path="api/dummy" auth={auth} {...props} />}
+                />
+                <Route
+                    path="/health"
+                    render={props =>
+                        !auth.isAuthenticated()
+                            ? <Redirect to="/home" />
+                            : <Ping path="actuator/health" auth={auth} {...props} />}
                 />
             </div>
         </Router>

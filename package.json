@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/auth0-js": "^8.11.2",
+    "@types/axios": "^0.14.0",
     "auth0-js": "^9.2.3",
     "bootstrap": "^3.3.7",
     "react": "^16.2.0",
