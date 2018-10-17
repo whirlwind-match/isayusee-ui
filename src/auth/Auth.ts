@@ -20,6 +20,7 @@ export default class Auth {
         this.handleAuthentication = this.handleAuthentication.bind(this);
         this.isAuthenticated = this.isAuthenticated.bind(this);
         this.getAccessToken = this.getAccessToken.bind(this);
+        this.getIdToken = this.getIdToken.bind(this);
         this.getProfile = this.getProfile.bind(this);
         this.scheduleRenewal();
     }
@@ -66,6 +67,14 @@ export default class Auth {
         const accessToken = localStorage.getItem('access_token');
         if (!accessToken) {
             throw new Error('No access token found');
+        }
+        return accessToken;
+    }
+
+    getIdToken() {
+        const accessToken = localStorage.getItem('id_token');
+        if (!accessToken) {
+            throw new Error('No id token found');
         }
         return accessToken;
     }

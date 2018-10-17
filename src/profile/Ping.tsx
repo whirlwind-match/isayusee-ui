@@ -11,9 +11,9 @@ interface Props {
 class Ping extends Component<Props> {
     constructor(props: Props) {
         super(props);
-        const {getAccessToken} = this.props.auth;
+        const {getIdToken} = this.props.auth;
         const API_URL = 'http://localhost:8080';
-        const headers = {'Authorization': `Bearer ${getAccessToken()}`};
+        const headers = {'Authorization': `Bearer ${getIdToken()}`};
         Axios.get(`${API_URL}/${this.props.path}`, {headers})
             .then((response: AxiosResponse) => this.setState({message: response.data.message}))
             .catch(error => this.setState({message: error.message}));
